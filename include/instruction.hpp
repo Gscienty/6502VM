@@ -86,6 +86,7 @@ public:
     void ins_ldx(uint8_t m);
     void ins_ldy(uint8_t m);
     void ins_lsr(uint8_t & m);
+    void ins_nop();
     void ins_ora(uint8_t m);
     void ins_pha();
     void ins_php();

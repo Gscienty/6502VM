@@ -266,6 +266,11 @@ void instruction::ins_lsr(uint8_t & m)
     m = result;
 }
 
+void instruction::ins_nop()
+{
+
+}
+
 void instruction::ins_ora(uint8_t m)
 {
     this->r.ac |= m;
