@@ -69,7 +69,7 @@ public:
         sr_operator<Flag>::clear(this->r.sr);
     }
 
-    void ins_cmd(uint8_t m);
+    void ins_cmp(uint8_t m);
     void ins_cpx(uint8_t m);
     void ins_cpy(uint8_t m);
     void ins_brk();

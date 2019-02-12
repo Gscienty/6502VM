@@ -124,7 +124,7 @@ void instruction::ins_bit(uint8_t m)
     __sr_negative(result);
 }
 
-void instruction::ins_cmd(uint8_t m)
+void instruction::ins_cmp(uint8_t m)
 {
     uint8_t result = this->r.ac - m;
 
