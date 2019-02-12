@@ -3,7 +3,8 @@
 
 #include <cstdint>
 
-namespace vm6502 {
+namespace vm6502
+{
 
 template <uint64_t N>
 struct sr_flags_mask

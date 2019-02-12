@@ -3,9 +3,11 @@
 
 #include <cstdint>
 
-namespace vm6502 {
+namespace vm6502
+{
 
-struct reg {
+struct reg
+{
     uint16_t pc;
     uint8_t ac;
     uint8_t x;

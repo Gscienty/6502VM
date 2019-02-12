@@ -4,9 +4,11 @@
 #include "register.hpp"
 #include "sr_flags.hpp"
 
-namespace vm6502 {
+namespace vm6502
+{
 
-class instruction {
+class instruction
+{
 private:
     uint8_t * stack;
     reg & r;
@@ -70,6 +72,7 @@ public:
     void ins_cmd(uint8_t m);
     void ins_cpx(uint8_t m);
     void ins_cpy(uint8_t m);
+    void ins_brk();
     void ins_dec(uint8_t & m);
     void ins_dex();
     void ins_dey();

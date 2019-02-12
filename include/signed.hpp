@@ -3,7 +3,8 @@
 
 #include <cstdint>
 
-namespace vm6502 {
+namespace vm6502
+{
 
 struct byte_meta
 {

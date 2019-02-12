@@ -2,7 +2,8 @@
 #include "signed.hpp"
 #include "sr_flags.hpp"
 
-namespace vm6502 {
+namespace vm6502
+{
 
 instruction::instruction(uint8_t * stack, reg & r) : stack(stack), r(r) { }
 
@@ -148,6 +149,15 @@ void instruction::ins_cpy(uint8_t m)
     __sr_negative(result);
     __sr_zero(result);
     __sr_carry(result, this->r.y, ~m + 1);
+}
+
+void instruction::ins_brk()
+{
+    __push(((this->r.pc + 2) & 0xFF00) >> 8);
+    __push((this->r.pc + 2) & 0x00FF);
+    __push(this->r.sr);
+
+    sr_set<sr_flags_interrupt>();
 }
 
 void instruction::ins_dec(uint8_t & m)
