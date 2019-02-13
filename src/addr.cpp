@@ -3,6 +3,8 @@
 namespace vm6502
 {
 
+memory::memory(reg & r) : r(r) { }
+
 uint8_t & memory::get(operand_addressing_type type, uint16_t operand)
 {
     switch (type) {
@@ -25,6 +27,11 @@ uint8_t & memory::get(operand_addressing_type type, uint16_t operand)
     default:
         return this->implied;
     }
+}
+
+uint8_t * memory::get_stack()
+{
+    return this->m + 0x01FF;
 }
 
 }

@@ -25,11 +25,13 @@ enum operand_addressing_type
 
 class memory {
 private:
-    reg r;
+    reg & r;
     uint8_t m[0x10000];
     uint8_t implied;
 public:
+    memory(reg & r);
     uint8_t & get(operand_addressing_type type, uint16_t operand);
+    uint8_t * get_stack();
 };
 
 }
