@@ -2,6 +2,7 @@
 #define _6502VM_MACHINE_CODE_H
 
 #include "instruction.hpp"
+#include "addr.hpp"
 #include <functional>
 
 namespace vm6502
@@ -13,23 +14,6 @@ enum operand_type
     op_type_ref,
     op_type_one,
     op_type_word,
-};
-
-enum operand_addressing_type
-{
-    op_addr_implied,
-    op_addr_acc,
-    op_addr_relative,
-    op_addr_immidiate,
-    op_addr_zeropage,
-    op_addr_zeropage_x,
-    op_addr_zeropage_y,
-    op_addr_absolute,
-    op_addr_absolute_x,
-    op_addr_absolute_y,
-    op_addr_indirect,
-    op_addr_indirect_x,
-    op_addr_indirect_y
 };
 
 struct mc_instruction
